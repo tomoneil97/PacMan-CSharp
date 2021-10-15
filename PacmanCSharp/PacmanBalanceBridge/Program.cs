@@ -13,7 +13,7 @@ namespace PacmanBalanceBridge
     class Program
     {
         static void Main(string[] args)
-        {
+        { //this is a comment
             string HostName = "";
             int NumberOfGames = 1;
             string AIAgentToUse = "";
