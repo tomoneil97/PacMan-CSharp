@@ -40,7 +40,7 @@ namespace Pacman.GameLogic.Ghosts
 		private bool chasing = true;
 		public bool Chasing { get { return chasing; } set { chasing = value; } }
 		private long fleeStart;
-		private const long fleeLength = 4000;
+		private const long fleeLength = 4000; //amount of time ghosts flee for
 		public long RemainingFlee;		
 		
 		protected const int randomMove = 5;

@@ -136,7 +136,9 @@ namespace Pacman.Simulator
                 Console.WriteLine(" 6 - UncertainAgent");
                 Console.WriteLine(" 7 - LucPacMCTS2");
 
-                Selection = int.Parse(Console.ReadKey().KeyChar.ToString());
+
+				
+				Selection = int.Parse(Console.ReadLine()); //changed to allow input of single digit.
 
             } else
             {
