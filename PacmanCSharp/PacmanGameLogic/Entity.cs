@@ -14,7 +14,7 @@ namespace Pacman.GameLogic
         public const int Width = 14;
 		public const int Height = 14;
 
-		protected double x, y;
+		protected double x, y; //pacman has these defined for the current 
 		public double Speed = 0.0f;		
 		protected Direction direction;
 		protected Direction lastNoneDirection;
@@ -68,7 +68,7 @@ namespace Pacman.GameLogic
 			lastPosition = new Point(x, y);
 		}
 		
-		public int X { get { return (int)Math.Round(x); } }
+		public int X { get { return (int)Math.Round(x); } } //this will return the x and y values of pacman.
 		public int Y { get { return (int)Math.Round(y); } }
 		public int ImgX { get { return X - 7; } }
 		public int ImgY { get { return Y - 7; } }

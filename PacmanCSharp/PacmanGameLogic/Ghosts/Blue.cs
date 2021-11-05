@@ -65,7 +65,7 @@ namespace Pacman.GameLogic.Ghosts
 						} else {
 							preferredDirection = Direction.Up;
 						}
-						if( !checkDirection(preferredDirection) || preferredDirection == InverseDirection(Direction) ) {
+						if( !checkDirection(preferredDirection) || preferredDirection == InverseDirection(Direction) ) { //ghosts have direction objects asociated 
 							if( IsLeft(GameState.Pacman) ) {
 								preferredDirection = Direction.Left;
 							} else {

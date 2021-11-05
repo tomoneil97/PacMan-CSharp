@@ -19,7 +19,7 @@ namespace Pacman.GameLogic.Ghosts
 			this.drawOffset = Height;
 			ResetPosition();
             this.Speed = Speed;
-            this.FleeSpeed = FleeSpeed;
+            this.FleeSpeed = FleeSpeed; //all instantiated within Game.
         }
 
 		public override void PacmanDead() {	
@@ -41,7 +41,7 @@ namespace Pacman.GameLogic.Ghosts
 				MoveRandom();
 			} else {
 				// testing pinky (stupid and mostly a bother?)
-				if( Distance(GameState.Pacman) > 120 || GameState.Pacman.Direction == Direction.None ) {
+				if( Distance(GameState.Pacman) > 120 || GameState.Pacman.Direction == Direction.None ) { //Distance is float.
 					// should probably do something else for none! (read gamefaq, but good enough for now)
 					MoveAsRed();
 				} else {
@@ -49,7 +49,7 @@ namespace Pacman.GameLogic.Ghosts
 					switch( GameState.Pacman.Direction ) {
 						case Direction.Up:
 							if( IsAbove(GameState.Pacman) ) {
-								TryGo(Direction.Down);
+								TryGo(Direction.Down); //TryGo is Ghost method.
 								if( IsLeft(GameState.Pacman) ) {
 									TryGo(Direction.Right);
 									TryGo(Direction.Left);

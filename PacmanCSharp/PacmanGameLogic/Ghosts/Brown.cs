@@ -35,7 +35,7 @@ namespace Pacman.GameLogic.Ghosts
 			base.ResetPosition();
 		}
 
-		public override void Move() {
+		public override void Move() { //brown moves randomly.
 			MoveRandom();
 			base.Move();
 		}

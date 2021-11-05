@@ -35,13 +35,18 @@ namespace Pacman.GameLogic.Ghosts
 		}
 
 		public override void Move() {
-			if( Distance(GameState.Pacman) > randomMoveDist && GameState.Random.Next(0, randomMove) == 0 ) {
-				MoveRandom();
-			} else {
-				MoveAsRed();
-			}
-			base.Move();
-		}
+            if (Distance(GameState.Pacman) > randomMoveDist && GameState.Random.Next(0, randomMove) == 0)
+            { //if too far away from pacman...
+                MoveRandom();
+            }
+            else
+            {
+                MoveAsRed();
+            }
+            base.Move(); //executes the movement.
+
+
+        }
 
         #region ICloneable Members
 

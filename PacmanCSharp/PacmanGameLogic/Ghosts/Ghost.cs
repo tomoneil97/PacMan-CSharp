@@ -54,7 +54,7 @@ namespace Pacman.GameLogic.Ghosts
             TimesEatenPacman = 0;
 		}
 
-        public override void Draw(System.Drawing.Graphics g, System.Drawing.Image sprites) {
+        public override void Draw(System.Drawing.Graphics g, System.Drawing.Image sprites) { //draws the ghost. Don't touch this.
 			if( isEaten ) {
 				g.DrawImage(sprites, new Rectangle(ImgX, ImgY, 14, 13), new Rectangle(28, 70, 13, 13), GraphicsUnit.Pixel);
 			} else if( chasing ) {
@@ -104,26 +104,26 @@ namespace Pacman.GameLogic.Ghosts
 
 		public abstract void PacmanDead();
 
-		public void Flee() {
+		public void Flee() { //don't touch this. Fleeing when roles are reversed.
 			fleeStart = GameState.Timer;
 			chasing = false;
             fleeing = true; // new
 		}
 
-		public void Reversal() {			
+		public void Reversal() {		//why? in event of wall crash?	
 			if( entered ) {
 				NextDirection = InverseDirection(direction);
 				setNextDirection();
 			}
 		}
 
-		public void Eaten() {			
+		public void Eaten() {			//if eaten. don't touch.
 			entered = false;
 			isEaten = true;
 			waitToEnter = -3;
 		}
 
-		public virtual void ResetPosition() {
+		public virtual void ResetPosition() { //start of new game.
 			resetPosition();
 		}
 
@@ -137,16 +137,16 @@ namespace Pacman.GameLogic.Ghosts
 		}
 				
 		public override void Move() {
-			if( !Enabled ) {
+			if( !Enabled ) { //ghost has enabled property.
 				return;
 			}
 			RemainingFlee = (fleeStart + fleeLength) - GameState.Timer;
-			if( !chasing && RemainingFlee < 0 && entered ) {
+			if( !chasing && RemainingFlee < 0 && entered ) { //turn back to chasing if flee time is over.
 				chasing = true;
                 fleeing = false; // new
 			}
 			// nest logic
-			if( !entered ) {
+			if( !entered ) { //if we are waiting in the cage...
 				if( waitToEnter > 0 ) { // going up and down before entering
 					if( Y < 113 || Y > 124 )
 						waitToEnter--;
@@ -221,10 +221,10 @@ namespace Pacman.GameLogic.Ghosts
 						}					
 					} else {
 
-                        // THIS HAS BEEN CHANGED
+                        // THIS HAS BEEN CHANGED //shortest path? Is this not MTS?
                         if (Node.ShortestPath[startNode.X, startNode.Y] != null)
                         {
-                            NextDirection = Node.ShortestPath[startNode.X, startNode.Y].Direction;
+                            NextDirection = Node.ShortestPath[startNode.X, startNode.Y].Direction; //direction class has next direction member.
                         }
                         else
                         {
@@ -243,10 +243,10 @@ namespace Pacman.GameLogic.Ghosts
 		}
 
 		private void evade() {
-			MoveRandom();
+			MoveRandom(); //if evading then completely random.
 		}
 
-		protected bool TryGo(Direction d) {
+		protected bool TryGo(Direction d) { //if going to hit wall... don't do it.
 			if( d == InverseDirection(Direction) )
 				return false;
 			switch( d ) {
@@ -258,7 +258,7 @@ namespace Pacman.GameLogic.Ghosts
 			return false;
 		}
 
-		protected void MoveRandom() {
+		protected void MoveRandom() { //completely random.
 			List<Direction> possible = PossibleDirections();
 			if( possible.Count > 0 ) {
 				int select = GameState.Random.Next(0, possible.Count);
@@ -268,7 +268,8 @@ namespace Pacman.GameLogic.Ghosts
 			}
 		}
 
-		protected void MoveInFavoriteDirection(Direction d1, Direction d2, Direction d3, Direction d4) {
+		protected void MoveInFavoriteDirection(Direction d1, Direction d2, Direction d3, Direction d4) { //favourite direction appears to be d1.
+			//favourite direction is dependent on ghost and params passed.
 			if( Direction != InverseDirection(d1) && checkDirection(d1) )
 				NextDirection = d1;
 			else if( Direction != InverseDirection(d2) && checkDirection(d2) )
@@ -279,11 +280,11 @@ namespace Pacman.GameLogic.Ghosts
 				NextDirection = d4;
 		}
 
-		protected void MoveAsRed() {
+		protected void MoveAsRed() { //standard directions.
 			MoveAsRed(Direction.Up, Direction.Left, Direction.Down, Direction.Right);
 		}
 
-		protected void MoveAsRed(Direction d1, Direction d2, Direction d3, Direction d4) {
+		protected void MoveAsRed(Direction d1, Direction d2, Direction d3, Direction d4) { //... can also call with specific directions.
 			Direction preferredDirection = Direction;
 			// minimize X
 			if( Math.Abs(Node.X - GameState.Pacman.Node.X) > Math.Abs(Node.Y - GameState.Pacman.Node.Y) ) {

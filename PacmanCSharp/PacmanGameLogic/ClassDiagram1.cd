@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pacman.GameLogic.Ghosts.Blue" Collapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACKAAAAAoAAgAAAABAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Ghosts\Blue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Ghosts.Brown" Collapsed="true">
+    <Position X="18" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACKAAAAAgAAgAAAABAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Ghosts\Brown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.Ghosts.Ghost" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoCYCAAACMAIgohABEAMBEQhRABEAgAAZAAAgBICAJg=</HashCode>
+      <FileName>Ghosts\Ghost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Ghosts.Pink" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACKAAAAAoAAgAAAABAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Ghosts\Pink.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Ghosts.Red" Collapsed="true">
+    <Position X="20.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACKAAAAAIAAAAAAABAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Ghosts\Red.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pacman.GameLogic.BasePacman" Collapsed="true">
+    <Position X="9" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQAAAgAoCAChAgECYAAAAgQBEACAAgIAAABQA=</HashCode>
+      <FileName>BasePacman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.Entity" Collapsed="true">
+    <Position X="24.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQwggAABICAIgAAACAAgEABAAJAAgBAAABgAFkB4Gg=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.GameState" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EMQDkAIAgRAAIiAUAgJANgAJQwMABAEZIYAEAIgEEBU=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Map" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhEAAMBAJABkAIIAgBAFAAEAEQAgAAAAAAAAEBCBQ=</HashCode>
+      <FileName>Map.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Node" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAIAEAAIAgAMmAAAACAAEAAAAAAACQioAIAQYBI=</HashCode>
+      <FileName>Node.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pacman.GameLogic.Pacman" Collapsed="true">
+    <Position X="24.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAQCCAABgggAAAAAAAAAAAAAgECAACAAAAAAFA=</HashCode>
+      <FileName>Pacman.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pacman.GameLogic.SimRandomPac" Collapsed="true">
+    <Position X="9" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>SimRandomPac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.StateInfo" Collapsed="true">
+    <Position X="27.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAEAAAAAABAAAIAAAAAAAAAAAAAACABACgAA=</HashCode>
+      <FileName>StateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.TestStats" Collapsed="true">
+    <Position X="29" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIIYAAABAACIACAAoAACEokgRCIIkAIEQUBQUAAAI=</HashCode>
+      <FileName>TestStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.Util" Collapsed="true">
+    <Position X="30.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.RemoteControl.RPCData" Collapsed="true">
+    <Position X="30.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAgAAAEAAQAA=</HashCode>
+      <FileName>RemoteControl\MapData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.RemoteControl.MapData" Collapsed="true">
+    <Position X="30.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABA=</HashCode>
+      <FileName>RemoteControl\MapData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman.GameLogic.RemoteControl.RPCClient" Collapsed="true">
+    <Position X="29" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAABAgAAAAAAAAIAAAAIAACAAAA=</HashCode>
+      <FileName>RemoteControl\RPCClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Pacman.GameLogic.Direction" Collapsed="true">
+    <Position X="27.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAiAAAEAAAI=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

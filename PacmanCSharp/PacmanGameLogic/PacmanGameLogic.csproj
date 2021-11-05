@@ -56,6 +56,7 @@
     <Compile Include="Ghosts\Blue.cs" />
     <Compile Include="Ghosts\Brown.cs" />
     <Compile Include="Ghosts\Ghost.cs" />
+    <Compile Include="Ghosts\GhostMTS.cs" />
     <Compile Include="Ghosts\Pink.cs" />
     <Compile Include="Ghosts\Red.cs" />
     <Compile Include="Map.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
