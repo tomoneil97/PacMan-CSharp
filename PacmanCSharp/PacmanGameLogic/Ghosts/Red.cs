@@ -45,7 +45,10 @@ namespace Pacman.GameLogic.Ghosts
             }
             base.Move(); //executes the movement.
 
+            //just to make it work..
+            
 
+            Direction d = GhostMTS.shortestDistance(this, GameState.Pacman);
         }
 
         #region ICloneable Members
