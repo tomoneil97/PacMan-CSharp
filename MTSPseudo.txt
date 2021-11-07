@@ -1,0 +1,44 @@
+Direction[] prefOrder = rankedDirections(ghost, pacman); //ghost is this. pacman is GameState.Pacman.
+
+for each( prefOrder direction){
+	TryGo(direction) == true{
+		break
+	}
+	
+
+Move();
+
+
+
+rankedDirections{
+	//reflects potential position AFTER move.
+	leftX = currentGhostX - distTravelledOneMove
+	
+	distanceIfLeft = pacman.Distance(leftX, origY)
+	
+	rightX currentGhostX + distTravelledOneMove
+	"										"
+	UpY = currentGhostY - distTravelledOneMove
+	"										"
+	DownY = currentGhostY + distTravelledOneMove
+	"										"
+	
+	Dictionary<Direction, number>
+	
+	Add direction value + distanceIf values X4
+	
+	
+	order dictionary by value; //favoured order
+	
+	Direction[] order;
+	
+	foreach(value in Dictionary){
+	
+		order = DictionaryKey
+	}
+	
+	return array
+}
+	
+	
+	

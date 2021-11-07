@@ -387,6 +387,11 @@ namespace Pacman.GameLogic
 			return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
 		}
 
+		public float Distance(double newX, double newY)
+        { //SO: the entity is what not to manipulate. In GhostMTS case, entity to call upon is pacman. newX newY should be calculated from your ghost.
+			return (float)Math.Sqrt(Math.Pow(newX - this.X, 2) + Math.Pow(newY - this.Y, 2));
+        }
+
 		public bool IsBelow(Entity entity){
 			if( Y <= entity.Y ) 
 				return true;

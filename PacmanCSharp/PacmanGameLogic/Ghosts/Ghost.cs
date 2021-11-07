@@ -249,7 +249,7 @@ namespace Pacman.GameLogic.Ghosts
 		protected bool TryGo(Direction d) { //if going to hit wall... don't do it.
 			if( d == InverseDirection(Direction) )
 				return false;
-			switch( d ) {
+			switch( d ) { //use this logic to check if the ghost can move in the favoured direction
 				case Direction.Up: if( Node.Up.Type != Node.NodeType.Wall ) { NextDirection = d; return true; } break;
 				case Direction.Down: if( Node.Down.Type != Node.NodeType.Wall ) { NextDirection = d; return true; } break;
 				case Direction.Left: if( Node.Left.Type != Node.NodeType.Wall ) { NextDirection = d; return true; } break;

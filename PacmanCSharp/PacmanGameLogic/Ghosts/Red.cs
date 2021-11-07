@@ -35,20 +35,33 @@ namespace Pacman.GameLogic.Ghosts
 		}
 
 		public override void Move() {
-            if (Distance(GameState.Pacman) > randomMoveDist && GameState.Random.Next(0, randomMove) == 0)
-            { //if too far away from pacman...
-                MoveRandom();
-            }
-            else
+            //if (Distance(GameState.Pacman) > randomMoveDist && GameState.Random.Next(0, randomMove) == 0)
+            //{ //if too far away from pacman...
+            //    MoveRandom();
+            //}
+            //else
+            //{
+            //    MoveAsRed();
+            //}
+
+
+            Direction[] order = GhostMTS.rankedDirections(this, GameState.Pacman);
+
+            foreach(Direction d in order)
             {
-                MoveAsRed();
+                if (TryGo(d))
+                {
+                    break; //if it works will break out of the loop and go to after.
+                }
             }
-            base.Move(); //executes the movement.
+            
+            
+            base.Move(); //executes the movement. //base is ghost ("base class")
 
             //just to make it work..
             
 
-            Direction d = GhostMTS.shortestDistance(this, GameState.Pacman);
+            //Direction d = GhostMTS.shortestDistance(this, GameState.Pacman);
         }
 
         #region ICloneable Members
