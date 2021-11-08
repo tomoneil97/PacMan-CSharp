@@ -49,8 +49,9 @@ namespace Pacman.GameLogic.Ghosts
 
             foreach(Direction d in order)
             {
-                if (TryGo(d))
+                if (TryGoInverseAllowed(d))
                 {
+                    Console.WriteLine("Red is moving " + d.ToString());
                     break; //if it works will break out of the loop and go to after.
                 }
             }

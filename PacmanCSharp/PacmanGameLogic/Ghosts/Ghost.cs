@@ -258,6 +258,18 @@ namespace Pacman.GameLogic.Ghosts
 			return false;
 		}
 
+        protected bool TryGoInverseAllowed(Direction d) // had to do this. InverseDirection returning false causes problems when up becomes down in certain instances.
+        { //something to do with comparing the previous direction when we were looking at the next direction(??)
+            switch (d)
+            { //use this logic to check if the ghost can move in the favoured direction
+                case Direction.Up: if (Node.Up.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
+                case Direction.Down: if (Node.Down.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
+                case Direction.Left: if (Node.Left.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
+                case Direction.Right: if (Node.Right.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
+            }
+            return false;
+		}
+
 		protected void MoveRandom() { //completely random.
 			List<Direction> possible = PossibleDirections();
 			if( possible.Count > 0 ) {

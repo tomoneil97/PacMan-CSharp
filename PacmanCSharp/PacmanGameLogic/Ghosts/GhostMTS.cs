@@ -126,6 +126,8 @@ namespace Pacman.GameLogic.Ghosts
                 i++;
             }
 
+
+            //Insert the "stay still" command between numbers greater/lower than current distance score. Research: How to insert value into array (and resize it).
             
             //tryGo in order.
 
