@@ -72,6 +72,10 @@ namespace Pacman.GameLogic.Ghosts
             double downY = ghost.Y + ghost.Speed;
             float distanceIfDown = p.Distance(ghost.X, downY);
 
+
+            //check for tunnels
+            
+            
             //figure out shortest.
             //array is probs easiest, if slightly inefficient.
 
@@ -90,6 +94,10 @@ namespace Pacman.GameLogic.Ghosts
             dirOrder.Add(Direction.Right, distanceIfRight);
             dirOrder.Add(Direction.Up, distanceIfUp);
             dirOrder.Add(Direction.Down, distanceIfDown);
+
+            //this should add a stationery command.
+
+            //dirOrder.Add(Direction.Stall, distanceCurrent);
 
 
             //put in favoured order.

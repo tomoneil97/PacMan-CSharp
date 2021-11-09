@@ -266,6 +266,7 @@ namespace Pacman.GameLogic.Ghosts
                 case Direction.Down: if (Node.Down.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
                 case Direction.Left: if (Node.Left.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
                 case Direction.Right: if (Node.Right.Type != Node.NodeType.Wall) { NextDirection = d; return true; } break;
+				case Direction.Stall: NextDirection = d; return true;
             }
             return false;
 		}

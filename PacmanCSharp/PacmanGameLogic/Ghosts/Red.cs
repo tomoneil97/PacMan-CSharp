@@ -49,13 +49,19 @@ namespace Pacman.GameLogic.Ghosts
 
             foreach(Direction d in order)
             {
-                if (TryGoInverseAllowed(d))
-                {
-                    Console.WriteLine("Red is moving " + d.ToString());
-                    break; //if it works will break out of the loop and go to after.
-                }
+                //if (d != InverseDirection(this.Direction))
+                //{
+
+                    //if the direction does not cause an inverse
+                    if (TryGo(d))
+                    {
+                        Console.WriteLine("Red is moving " + d.ToString());
+                        break; //if it works will break out of the loop and go to after.
+                    }
+                //}
+                
             }
-            
+            //setNextDirection();
             
             base.Move(); //executes the movement. //base is ghost ("base class")
 

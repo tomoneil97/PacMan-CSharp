@@ -40,7 +40,7 @@ namespace Pacman.GameLogic
        
 		public Brown Brown;
     
-        public Ghost[] Ghosts = new Ghost[4];
+        public Ghost[] Ghosts = new Ghost[1]; //changed from 4
 
         [NonSerialized()]
 		public BasePacman Controller;
@@ -117,9 +117,9 @@ namespace Pacman.GameLogic
 			// default position ... find out where
 			Pacman = new Pacman(Pacman.StartX, Pacman.StartY, this, EvolvedValues[0]);
 			Ghosts[0] = Red = new Red(Red.StartX, Red.StartY, this, EvolvedValues[1], EvolvedValues[5]);
-			Ghosts[1] = Pink = new Pink(Pink.StartX, Pink.StartY, this, EvolvedValues[2], EvolvedValues[6]);
-			Ghosts[2] = Blue = new Blue(Blue.StartX, Blue.StartY, this, EvolvedValues[3], EvolvedValues[7]);
-			Ghosts[3] = Brown = new Brown(Brown.StartX, Brown.StartY, this, EvolvedValues[4], EvolvedValues[8]);
+			//Ghosts[1] = Pink = new Pink(Pink.StartX, Pink.StartY, this, EvolvedValues[2], EvolvedValues[6]);
+			//Ghosts[2] = Blue = new Blue(Blue.StartX, Blue.StartY, this, EvolvedValues[3], EvolvedValues[7]);
+			//Ghosts[3] = Brown = new Brown(Brown.StartX, Brown.StartY, this, EvolvedValues[4], EvolvedValues[8]);
 
             Random = new Random(RandomSeed);
 		}
@@ -131,9 +131,9 @@ namespace Pacman.GameLogic
             // default position ... find out where
             Pacman = new Pacman(Pacman.StartX, Pacman.StartY, this, 3.0f);
             Ghosts[0] = Red = new Red(Red.StartX, Red.StartY, this, 2.8f, 1.5f);
-            Ghosts[1] = Pink = new Pink(Pink.StartX, Pink.StartY, this, 2.8f, 1.5f);
-            Ghosts[2] = Blue = new Blue(Blue.StartX, Blue.StartY, this, 2.8f, 1.5f);
-            Ghosts[3] = Brown = new Brown(Brown.StartX, Brown.StartY, this, 2.8f, 1.5f);
+            //Ghosts[1] = Pink = new Pink(Pink.StartX, Pink.StartY, this, 2.8f, 1.5f);
+            //Ghosts[2] = Blue = new Blue(Blue.StartX, Blue.StartY, this, 2.8f, 1.5f);
+            //Ghosts[3] = Brown = new Brown(Brown.StartX, Brown.StartY, this, 2.8f, 1.5f);
 
             if(RandomSeed != 0)
             {
@@ -604,17 +604,17 @@ namespace Pacman.GameLogic
             //}
 
             // Generate the new array of ghosts
-            _temp.Ghosts = new Ghost[4];
+            _temp.Ghosts = new Ghost[1];
             _temp.Ghosts[0] = _temp.Red = (Red)Red.Clone();
-            _temp.Ghosts[1] = _temp.Pink = (Pink)Pink.Clone();
-            _temp.Ghosts[2] = _temp.Blue = (Blue)Blue.Clone();
-            _temp.Ghosts[3] = _temp.Brown = (Brown)Brown.Clone();
+            //_temp.Ghosts[1] = _temp.Pink = (Pink)Pink.Clone();
+            //_temp.Ghosts[2] = _temp.Blue = (Blue)Blue.Clone();
+            //_temp.Ghosts[3] = _temp.Brown = (Brown)Brown.Clone();
             
             // Assign the newly generated game state manually
             // to the objects.
-            _temp.Brown.GameState = _temp;
-            _temp.Pink.GameState = _temp;
-            _temp.Blue.GameState = _temp;
+            //_temp.Brown.GameState = _temp;
+            //_temp.Pink.GameState = _temp;
+            //_temp.Blue.GameState = _temp;
             _temp.Red.GameState = _temp;
 
             // Generate a random controller for the future simulations

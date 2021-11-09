@@ -174,7 +174,7 @@ namespace PacmanAI
             Console.WriteLine(" 2 - LucPac (MCTS)");
             Console.WriteLine(" 3 - MMLocPac (Evolved Neural Network) from .nn file");
             Console.WriteLine(" 5 - SimRandom");
-            int Selection = int.Parse(Console.ReadKey().KeyChar.ToString());
+            int Selection = int.Parse(Console.ReadLine());
 
             switch (Selection)
             {

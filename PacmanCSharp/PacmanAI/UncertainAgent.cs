@@ -15,7 +15,7 @@ namespace PacmanAI
 
         public UncertainAgent() : base("UncertainAgent")
         {
-            UseSmart = GameState.Random.NextDouble() > 0.5f;
+            UseSmart = false;//GameState.Random.NextDouble() > 0.5f;
             LucPac.REMAIN_QUIET = true;
             LucPacScripted.REMAIN_QUIET = true;
 
