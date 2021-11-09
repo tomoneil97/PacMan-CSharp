@@ -110,7 +110,7 @@ namespace Pacman.GameLogic.Ghosts
             fleeing = true; // new
 		}
 
-		public void Reversal() {		//why? in event of wall crash?	
+		public virtual void Reversal() {		//why? in event of wall crash?	
 			if( entered ) {
 				NextDirection = InverseDirection(direction);
 				setNextDirection();

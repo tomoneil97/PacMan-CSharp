@@ -34,41 +34,38 @@ namespace Pacman.GameLogic.Ghosts
 			entered = true;
 		}
 
-		public override void Move() {
-            //if (Distance(GameState.Pacman) > randomMoveDist && GameState.Random.Next(0, randomMove) == 0)
-            //{ //if too far away from pacman...
-            //    MoveRandom();
-            //}
-            //else
-            //{
-            //    MoveAsRed();
-            //}
 
+        public override void Reversal()
+        {       
+           //deliberately empty
+        }
+        public override void Move() {
+            
 
             Direction[] order = GhostMTS.rankedDirections(this, GameState.Pacman);
 
-            foreach(Direction d in order)
+            /* Original attempt:
+            foreach (Direction d in order)
             {
-                //if (d != InverseDirection(this.Direction))
-                //{
+                if (d != InverseDirection(this.Direction))
+                {
 
-                    //if the direction does not cause an inverse
-                    if (TryGo(d))
+                    if the direction does not cause an inverse
+                    if (TryGoInverseAllowed(d))
                     {
                         Console.WriteLine("Red is moving " + d.ToString());
                         break; //if it works will break out of the loop and go to after.
                     }
-                //}
-                
+                }
+    
             }
-            //setNextDirection();
+            */
+            MoveInFavoriteDirection(order[0],order[1],order[2],order[3]);
+            
             
             base.Move(); //executes the movement. //base is ghost ("base class")
 
-            //just to make it work..
             
-
-            //Direction d = GhostMTS.shortestDistance(this, GameState.Pacman);
         }
 
         #region ICloneable Members

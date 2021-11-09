@@ -36,6 +36,7 @@ namespace Pacman.Simulator
             startVisualizer(Agent, AgentFile);
 						
 			while( true ) {
+				
 				string input = Console.ReadLine();
 				switch(input){
 					case "":
