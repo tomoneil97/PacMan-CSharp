@@ -44,22 +44,21 @@ namespace Pacman.GameLogic.Ghosts
 
             Direction[] order = GhostMTS.rankedDirections(this, GameState.Pacman);
 
-            /* Original attempt:
+            /*Original attempt:
             foreach (Direction d in order)
             {
-                if (d != InverseDirection(this.Direction))
-                {
 
-                    if the direction does not cause an inverse
+
+                if the direction does not cause an inverse
                     if (TryGoInverseAllowed(d))
-                    {
-                        Console.WriteLine("Red is moving " + d.ToString());
-                        break; //if it works will break out of the loop and go to after.
-                    }
+                {
+                    Console.WriteLine("Red is moving " + d.ToString());
+                    break; //if it works will break out of the loop and go to after.
                 }
-    
-            }
-            */
+
+
+            }*/
+
             MoveInFavoriteDirection(order[0],order[1],order[2],order[3]);
             
             
