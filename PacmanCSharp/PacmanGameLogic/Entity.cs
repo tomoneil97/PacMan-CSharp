@@ -384,10 +384,10 @@ namespace Pacman.GameLogic
 		}
 
 		public float Distance(Entity entity) {
-			return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
+			return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - entity.Y, 2)); //pythagoras theorem
 		}
 
-		public float Distance(double newX, double newY)
+		public float Distance(double newX, double newY) //use this signature
         { //SO: the entity is what not to manipulate. In GhostMTS case, entity to call upon is pacman. newX newY should be calculated from your ghost.
 			return (float)Math.Sqrt(Math.Pow(newX - this.X, 2) + Math.Pow(newY - this.Y, 2));
         }
